@@ -6,7 +6,7 @@ import type { Mesh } from "three";
 function AnimatedSphere() {
   const meshRef = useRef<Mesh>(null);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (meshRef.current) {
       meshRef.current.rotation.x += delta * 0.2;
       meshRef.current.rotation.y += delta * 0.3;
