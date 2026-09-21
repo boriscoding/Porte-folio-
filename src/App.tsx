@@ -1,33 +1,25 @@
-import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Projects from "./components/Projects"; // 👈 SANS ACCOLADES
-import CardioModal from "./components/CardioModal";
+import Stats from "./components/Stats";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills"; // <--- Import ici
+import Parcours from "./components/Parcours";
 import Certifications from "./components/Certifications";
-import Stack from "./components/Stack";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-function App() {
-  const [openModalId, setOpenModalId] = useState<string | null>(null);
-
-  useEffect(() => {
-    document.body.style.overflow = openModalId ? "hidden" : "";
-  }, [openModalId]);
-
+export default function App() {
   return (
-    <div className="app">
+    <div className="app-container">
       <Navbar />
       <Hero />
-      <Projects onOpenModal={(id) => setOpenModalId(id)} />
+      <Stats />
+      <Projects onOpenModal={(id) => console.log("Modal:", id)} />
+      <Skills /> {/* <--- Placé juste après les projets */}
+      <Parcours />
       <Certifications />
-      <Stack />
+      <Contact />
       <Footer />
-      <CardioModal
-        isOpen={openModalId === "cardioModal"}
-        onClose={() => setOpenModalId(null)}
-      />
     </div>
   );
 }
-
-export default App;

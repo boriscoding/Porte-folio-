@@ -14,14 +14,20 @@ export default function Projects({ onOpenModal }: ProjectsProps) {
 
   return (
     <section id="projets" className="projects-section">
-      <div className="container">
+      <div className="container" 
+      style={{
+            scrollMarginBottom: "20%",
+           
+            
+          }}>
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             flexWrap: "wrap",
-            gap: "12px"
+            gap: "12px",
+           bottom: "20%",
           }}
         >
           <h2 className="section-title" style={{ margin: 0 }}>
@@ -52,6 +58,7 @@ export default function Projects({ onOpenModal }: ProjectsProps) {
           <ProjectCard key={project.id} project={project} onOpenModal={onOpenModal} />
         ))}
       </div>
+     
 
       <AddProjectModal isOpen={isAddOpen} onClose={() => setIsAddOpen(false)} onAdd={addProject} />
     </section>
