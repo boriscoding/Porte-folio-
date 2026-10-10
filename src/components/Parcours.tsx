@@ -46,6 +46,16 @@ const experiences: TimelineItem[] = [
 
 const education: TimelineItem[] = [
   {
+    id: "edu-0",
+    period: "2026 - 2027",
+    role: "Licence Génie Logiciel",
+    organization: "Institut Universitaire de la Côte (IUC)",
+    location: "Douala, Cameroun",
+    description: "Poursuite du cursus en Génie Logiciel avec approfondissement en architecture logicielle, ingénierie des systèmes distribués et gestion de projets IT.",
+    skills: ["Architecture Logicielle", "Gestion de Projet", "Systèmes Distribués"],
+    type: "education"
+  },
+  {
     id: "edu-1",
     period: "Octobre 2024 - Juin 2026",
     role: "BTS Génie Logiciel",
